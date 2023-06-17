@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import the Bootstrap CSS file
+import { LoginSystem } from '../../services/loginService';
 
 
 function LoginForm() {
@@ -11,10 +12,12 @@ function LoginForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    
 
     if (isCaptchaValid) {
       // Perform login logic here
       console.log('Login successful');
+      LoginSystem(username, password);
     } else {
       console.log('Invalid captcha');
     }
