@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import "./Login.css";
+import LoginForm from "./LoginForm/LoginForm";
 
 function Login() {
   const [password, setpassword] = useState("");
@@ -38,7 +39,9 @@ function Login() {
   return (
     <>
       {login ? (  
-        ""
+        <LoginForm>
+
+        </LoginForm>
       ) : register ? (
         <div className="form">
           <div className="username">
