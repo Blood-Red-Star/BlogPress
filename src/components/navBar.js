@@ -1,8 +1,7 @@
 import Container from 'react-bootstrap/Container';
-import "./NavBar_data"
 import React, { ReactNode, useEffect, useState } from "react";
-import "./NavBar.css"
-import { NavBar_Data } from './NavBar_data';
+import "../Styles/NavBar.css"
+import { NavBar_Data } from '../Data/NavBar_data';
 
 function BasicExample() {
     const [URL, set_URl] = useState("")

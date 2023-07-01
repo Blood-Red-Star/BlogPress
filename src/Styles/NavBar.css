@@ -21,7 +21,14 @@ ul > li{
     list-style-type: none;
     align-items: center;
 }
-
+li > a{
+    outline:2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+li > a:focus{
+    outline: 2px solid black;
+}
 li > .reg{
     text-decoration: none;
     color: grey;
@@ -63,13 +70,19 @@ li > .icon{
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+.logo:focus{
+    outline: 2px solid black;
 }
 .logo > div{
     width: 90%;
     height: 100%;
     border: none;
-    outline: none;
-    background-image: url(BDPA_logo.png);
+    outline: 2px solid transparent;
+    background-image: url(../Images/BDPA_logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

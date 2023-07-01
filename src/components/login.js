@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { LoginSystem } from "../Services/loginservice";
-import "./Login.css";
+import "../Styles/Login.css"
 
 function Login() {
   const [password, setpassword] = useState("");
@@ -61,6 +61,21 @@ function Login() {
   };
   return (
     <>
+      <div className="selectors">
+        <div className="selector">
+          <button className={login ? "active" : "none"} onClick={login_func}>
+            Login
+          </button>
+        </div>
+        <div className="selector">
+          <button
+            className={register ? "active" : "none"}
+            onClick={register_func}
+          >
+            Register
+          </button>
+        </div>
+      </div>
       {login ? (
         <div className="form">
           <div className="username">
@@ -101,7 +116,8 @@ function Login() {
           <div className="username cpatcha">
             <h1>Captcha</h1>
             <input
-            value={captcha}
+              placeholder="Captcha"
+              value={captcha}
               type="text"
               onChange={(e) => {
                 setCaptcha(e.target.value);
@@ -160,30 +176,15 @@ function Login() {
           </div>
           <div className="username">
             <h1>Blog Name</h1>
-            <input type="text" placeholder="Blogname" />
+            <input type="text" placeholder="Blog Name" />
           </div>
           <div className="submit">
-            <button>Login</button>
+            <button>Register</button>
           </div>
         </div>
       ) : (
         <h1>Error in the Code </h1>
       )}
-      <div className="selectors">
-        <div className="selector">
-          <button className={login ? "active" : "none"} onClick={login_func}>
-            Login
-          </button>
-        </div>
-        <div className="selector">
-          <button
-            className={register ? "active" : "none"}
-            onClick={register_func}
-          >
-            Register
-          </button>
-        </div>
-      </div>
     </>
   );
 }
