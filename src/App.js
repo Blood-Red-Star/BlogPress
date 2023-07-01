@@ -3,7 +3,7 @@ import './Styles/App.css';
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import HomePage from './Main_Components/home_page';
 import BasicExample from './components/navBar';
-import Login from './components/login';
+import LR_form from './components/lr_form';
 function App() {
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='/' element={<HomePage />} />
           <Route path='*' element={<HomePage />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<LR_form />} />
         </Routes>
       </BrowserRouter>
     </>
